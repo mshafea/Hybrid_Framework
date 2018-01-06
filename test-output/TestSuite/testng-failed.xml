@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <parameter name="browser" value="IE"/>
+  <test name="ChromeTest">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testcases.TestCreateNewUser"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+  <test name="FirefoxTest">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="testcases.TestCreateNewUser"/>
+    </classes>
+  </test> <!-- FirefoxTest -->
+  <test name="IETest">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="testcases.TestCreateNewUser"/>
+    </classes>
+  </test> <!-- IETest -->
+  <test name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testcases.TestCreateNewUser">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="createNewUser" invocation-numbers="0 2 3"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="failedTestCases"/>
+          <include name="failedTestCases"/>
+          <include name="failedTestCases"/>
+        </methods>
+      </class> <!-- testcases.TestCreateNewUser -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test name="FirefoxTest(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="testcases.TestCreateNewUser">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="createNewUser" invocation-numbers="0 1 2 3"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="failedTestCases"/>
+          <include name="failedTestCases"/>
+          <include name="failedTestCases"/>
+        </methods>
+      </class> <!-- testcases.TestCreateNewUser -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test name="IETest(failed)">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="testcases.TestCreateNewUser">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="createNewUser" invocation-numbers="0 1 2"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="failedTestCases"/>
+          <include name="failedTestCases"/>
+          <include name="failedTestCases"/>
+        </methods>
+      </class> <!-- testcases.TestCreateNewUser -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
